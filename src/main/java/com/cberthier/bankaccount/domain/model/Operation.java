@@ -10,7 +10,7 @@ public class Operation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(foreignKey = @ForeignKey(name = "fk_operation_account_id"), nullable = false)
     private Account account;
 
